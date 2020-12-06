@@ -107,6 +107,7 @@ p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
 }
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
@@ -214,9 +215,11 @@ Grocery List
   display: flex;
   justify-content: center;
 }
-#grocery {
+#grocery , #quantity ,#price{
   padding: 0.25rem;
   padding-left: 1rem;
+  margin-left: 2px;
+  width: 170px;
   background: var(--clr-grey-10);
   border-top-left-radius: var(--radius);
   border-bottom-left-radius: var(--radius);
@@ -225,9 +228,40 @@ Grocery List
   flex: 1 0 auto;
   color: var(--clr-grey-5);
 }
+/* .total-btn{
+  color: var(--clr-grey-5);
+border-radius: 5px;
+border: 2px solid var(--clr-grey-5);
+background-color:#2c698d;
+color:#ffffff;
+font-size: 12px;
+font-weight: bold;
+margin: 15px 50px;
+padding: 10px;
+letter-spacing: 1px;
+text-transform: uppercase;
+transition: transform 80ms ease-in;  
+}
+.total-btn:hover{
+transform:scale(1.2);
+background: white;
+color: #2c698d;
+}
+.total-btn:focus{
+outline: none;
+} */
+#quantity ,#price{
+  width: 50px;
+}
 #grocery::placeholder {
   font-family: var(--ff-secondary);
   color: var(--clr-grey-5);
+}
+#tot{
+  margin-left: 280px;
+}
+#totalamount{
+  margin-left: 100px;
 }
 .submit-btn {
   background: var(--clr-primary-8);
@@ -245,7 +279,26 @@ Grocery List
   transition: var(--transition);
   font-size: 0.85rem;
 }
-.submit-btn:hover {
+.total-btn{
+    text-transform: capitalize;
+    width: 10rem;
+    height: 1.5rem;
+    display: grid;
+    align-items: center;
+    content: var(--clr-primary-5);
+    background: var(--clr-primary-8);
+    border-color: transparent;
+    margin: 0 auto;
+    font-size: 0.85rem;
+    letter-spacing: var(--spacing);
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 1.25rem;
+  
+}
+
+.submit-btn:hover,
+.total-btn:hover {
   background: var(--clr-primary-5);
   color: var(--clr-white);
 }
@@ -260,7 +313,6 @@ Grocery List
 }
 .grocery-item {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   margin-bottom: 0.5rem;
   transition: var(--transition);
@@ -268,6 +320,10 @@ Grocery List
   border-radius: var(--radius);
   text-transform: capitalize;
 }
+ #name{
+text-align:left ;
+padding-right: 80px;
+} 
 .grocery-item:hover {
   color: var(--clr-grey-5);
   background: var(--clr-grey-10);

@@ -19,6 +19,8 @@
           <h3>grocery bud</h3>
           <div class="form-control">
             <input type="text" placeholder="eg.milk" id="grocery"/>
+            <input id='quantity'  type=number min="1" placeholder="Quantity">
+            <input id="price" type="number" min="1" step="any"placeholder="Price" />
             <button type="submit" class="submit-btn">
               submit
 
@@ -27,11 +29,22 @@
         </p>
       </form>
       <div class="grocery-container">
+        <div class="head">
+        <span id="name">ITEM</span>
+        <span id="name">Quantity</span>
+        <span id="name">PRICE</span>
+        <span id="name"></span>
+      </div>
         <div class="grocery-list">
           <article class="grocery-item">
            
           </article>
         </div>
+        <div id="tot">TOTAL <span id="totalamount"></span></div>
+        <button class="total-btn" type="button">
+          calculate total
+        </button>
+        
         <button class="clear-btn" type="button">
           clear items
         </button>
